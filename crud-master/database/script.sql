@@ -1,0 +1,12 @@
+CREATE DATABASE crud_master;
+
+use crud_master;
+
+CREATE TABLE tarea(
+  id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  titulo VARCHAR(255) NOT NULL,
+  descripcion TEXT,
+  fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+DESCRIBE tarea;
