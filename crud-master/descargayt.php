@@ -1,3 +1,4 @@
+<?php include('includes/index.php'); ?>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $url = $_POST["url"];
@@ -14,4 +15,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<?php include('includes/header.php'); ?>
+
