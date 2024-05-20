@@ -42,7 +42,7 @@
           <input type="text" id="formato" name="formato"><br><br>
           <label for="formato">Seleccione el formato (mp4 o mp3):</label><br>
         </div>
-        <input type="submit" value="Descargar">
+        <input type="submit" name="descargayt" value="Descargar">
       </form>
     </div>
     <div class="col-md-8">
