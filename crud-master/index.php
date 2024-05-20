@@ -1,6 +1,7 @@
 <?php include("db.php"); ?>
 
 <?php include('includes/header.php'); ?>
+<?php include('includes/descargayt.php'); ?>
 
 <main class="container p-4">
   <div class="row">
