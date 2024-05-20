@@ -32,6 +32,19 @@
         </form>
       </div>
     </div>
+    <div class="card card-body">
+      <form action="descargayt.php" method="POST">
+        <div class="form-group">
+          <label for="url">Ingrese la URL del video de YouTube:</label><br>
+          <input type="text" id="url" name="url"><br>
+        </div>
+        <div class="form-group">
+          <input type="text" id="formato" name="formato"><br><br>
+          <label for="formato">Seleccione el formato (mp4 o mp3):</label><br>
+        </div>
+        <input type="submit" value="Descargar">
+      </form>
+    </div>
     <div class="col-md-8">
       <table class="table table-bordered">
         <thead>
@@ -68,18 +81,7 @@
     </div>
   </div>
 </main>
-<div class="card card-body">
-  <form action="descargayt.php" method="POST">
-    <div class="form-group">
-      <label for="url">Ingrese la URL del video de YouTube:</label><br>
-      <input type="text" id="url" name="url"><br>
-    </div>
-    <div class="form-group">
-    <input type="text" id="formato" name="formato"><br><br>
-      <label for="formato">Seleccione el formato (mp4 o mp3):</label><br>
-    </div>
-    <input type="submit" value="Descargar">
-  </form>
-</div>
+
+
 
 <?php include('includes/footer.php'); ?>
