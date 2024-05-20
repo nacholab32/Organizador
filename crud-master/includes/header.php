@@ -14,6 +14,6 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="index.php">Tareas a Realizar</a>
-        <a class="navbar-brand" href="descargayt.php">Descargas</a>
+        <a class="navbar-brand" href="index.php">Descargas</a>
       </div>
     </nav>
