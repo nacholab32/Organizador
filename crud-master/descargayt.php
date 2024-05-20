@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <?php include('includes/header.php'); ?>
+<div class="card card-body">
 <!-- Formulario para que los usuarios ingresen la URL y el formato -->
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <label for="url">Ingrese la URL del video de YouTube:</label><br>
@@ -25,3 +26,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="submit" value="Descargar">
     <button type="button">Mi Botón</button>
 </form>
+</div>
