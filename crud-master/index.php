@@ -73,12 +73,12 @@
     <div class="form-group">
       <label for="url">Ingrese la URL del video de YouTube:</label><br>
       <input type="text" id="url" name="url"><br>
-      <input type="submit" value="Descargar">
     </div>
     <div class="form-group">
+    <input type="text" id="formato" name="formato"><br><br>
       <label for="formato">Seleccione el formato (mp4 o mp3):</label><br>
     </div>
-    <input type="text" id="formato" name="formato"><br><br>
+    <input type="submit" value="Descargar">
   </form>
 </div>
 
