@@ -9,13 +9,14 @@
       <!-- mensajes de alerta -->
 
       <?php if (isset($_SESSION['message'])) { ?>
-      <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
-        <?= $_SESSION['message']?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <?php session_unset(); } ?>
+        <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
+          <?= $_SESSION['message'] ?>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <?php session_unset();
+      } ?>
 
       <!-- vista para agregar la tarea en el fomulario -->
       <div class="card card-body">
@@ -41,25 +42,36 @@
           </tr>
         </thead>
         <tbody>
+          <div class="card card-body">
+            <!-- Formulario para que los usuarios ingresen la URL y el formato -->
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+              <label for="url">Ingrese la URL del video de YouTube:</label><br>
+              <input type="text" id="url" name="url"><br>
+              <label for="formato">Seleccione el formato (mp4 o mp3):</label><br>
+              <input type="text" id="formato" name="formato"><br><br>
+              <input type="submit" value="Descargar">
+              <button type="button">Mi Botón</button>
+            </form>
+          </div>
 
           <?php
           $query = "SELECT * FROM tarea";
-          $resultado_tarea = mysqli_query($conn, $query);    
+          $resultado_tarea = mysqli_query($conn, $query);
 
-          while($row = mysqli_fetch_assoc($resultado_tarea)) { ?>
-          <tr>
-            <td><?php echo $row['titulo']; ?></td>
-            <td><?php echo $row['descripcion']; ?></td>
-            <td><?php echo $row['fecha']; ?></td>
-            <td>
-              <a href="editar.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
-                <i class="fas fa-marker"></i>
-              </a>
-              <a href="eliminar_tarea.php?id=<?php echo $row['id']?>" class="btn btn-danger">
-                <i class="far fa-trash-alt"></i>
-              </a>
-            </td>
-          </tr>
+          while ($row = mysqli_fetch_assoc($resultado_tarea)) { ?>
+            <tr>
+              <td><?php echo $row['titulo']; ?></td>
+              <td><?php echo $row['descripcion']; ?></td>
+              <td><?php echo $row['fecha']; ?></td>
+              <td>
+                <a href="editar.php?id=<?php echo $row['id'] ?>" class="btn btn-secondary">
+                  <i class="fas fa-marker"></i>
+                </a>
+                <a href="eliminar_tarea.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
+                  <i class="far fa-trash-alt"></i>
+                </a>
+              </td>
+            </tr>
           <?php } ?>
         </tbody>
       </table>

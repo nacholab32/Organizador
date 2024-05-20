@@ -14,16 +14,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
 <?php include('includes/header.php'); ?>
-<div class="card card-body">
-<!-- Formulario para que los usuarios ingresen la URL y el formato -->
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <label for="url">Ingrese la URL del video de YouTube:</label><br>
-    <input type="text" id="url" name="url"><br>
-    <label for="formato">Seleccione el formato (mp4 o mp3):</label><br>
-    <input type="text" id="formato" name="formato"><br><br>
-    <input type="submit" value="Descargar">
-    <button type="button">Mi Botón</button>
-</form>
-</div>
