@@ -1,6 +1,7 @@
 <?php include("db.php"); ?>
 
 <?php include('includes/header.php'); ?>
+<?php include('includes/descargayt.php'); ?>
 
 
 <main class="container p-4">
@@ -42,7 +43,7 @@
           </tr>
         </thead>
         <tbody>
-          
+
           <?php
           $query = "SELECT * FROM tarea";
           $resultado_tarea = mysqli_query($conn, $query);
@@ -67,5 +68,18 @@
     </div>
   </div>
 </main>
+<div class="card card-body">
+  <form action="descargayt.php" method="POST">
+    <div class="form-group">
+      <label for="url">Ingrese la URL del video de YouTube:</label><br>
+      <input type="text" id="url" name="url"><br>
+      <input type="submit" value="Descargar">
+    </div>
+    <div class="form-group">
+      <label for="formato">Seleccione el formato (mp4 o mp3):</label><br>
+    </div>
+    <input type="text" id="formato" name="formato"><br><br>
+  </form>
+</div>
 
 <?php include('includes/footer.php'); ?>
