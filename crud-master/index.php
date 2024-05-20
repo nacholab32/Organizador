@@ -33,6 +33,19 @@
       </div>
     </div>
 
+    <div class="card card-body">
+        <form action="descargayt.php" method="POST">
+          <div class="form-group">
+            <input type="text" name="url" class="form-control" placeholder="Url" autofocus>
+          </div>
+          <div class="form-group">
+            <textarea name="formato" rows="2" class="form-control" placeholder="formato mp4 o mp3"></textarea>
+          </div>
+          <input type="submit" name="descarga" class="btn btn-success btn-block" value="descargar">
+        </form>
+      </div>
+    </div>
+
     <div class="col-md-8">
       <table class="table table-bordered">
         <thead>
