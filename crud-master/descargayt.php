@@ -1,4 +1,7 @@
 <?php
+
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $url = $_POST["url"];
     $formato = $_POST["formato"];
@@ -14,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<?php include('includes/header.php'); ?>
 <!-- Formulario para que los usuarios ingresen la URL y el formato -->
 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <label for="url">Ingrese la URL del video de YouTube:</label><br>
