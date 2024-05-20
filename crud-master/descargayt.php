@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $command = escapeshellcmd("python3 descargar_video.py " . $url . " " . $formato);
     $output = shell_exec($command);
     echo $output;
+    header('Location: index.php');
 }
 ?>
 
